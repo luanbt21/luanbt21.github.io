@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import "./layout.css";
-	import ThemeToggle from "$lib/ThemeToggle.svelte";
+	import AnimatedThemeToggler from "$lib/components/magic/animated-theme-toggler/animated-theme-toggler.svelte";
 	import AiBadge from "$lib/AiBadge.svelte";
 	import favicon from "$lib/assets/favicon.svg";
+	import { ModeWatcher } from "mode-watcher";
+	import { ScrollProgress } from "$lib/components/magic/scroll-progress";
 
 	let { children } = $props();
 
@@ -209,6 +211,7 @@
 <canvas bind:this={canvasEl} class="pointer-events-none fixed inset-0 z-10"
 ></canvas>
 
+<ModeWatcher />
 <div class="relative min-h-screen bg-grid-pattern pb-16 overflow-x-clip">
 	<!-- Liquid Background Blobs -->
 	<div
@@ -273,10 +276,13 @@
 					</nav>
 
 					<div class="flex items-center gap-2">
-						<ThemeToggle />
+						<AnimatedThemeToggler
+							class="w-9 h-9 rounded-full flex items-center justify-center bg-white/40 dark:bg-slate-900/40 border border-slate-200/40 dark:border-white/10 hover:scale-105 transition-transform"
+						/>
 					</div>
 				</div>
 			</div>
+			<ScrollProgress />
 		</header>
 	</div>
 

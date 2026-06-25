@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AuroraText from "$lib/components/magic/aurora-text/aurora-text.svelte";
 	import { onMount } from "svelte";
 
 	// State for the scroll-driven SVG line
@@ -9,9 +10,15 @@
 		const handleScroll = () => {
 			if (!ticking) {
 				window.requestAnimationFrame(() => {
-					if (!svgPath) { ticking = false; return; }
+					if (!svgPath) {
+						ticking = false;
+						return;
+					}
 					const timeline = document.getElementById("experience-timeline");
-					if (!timeline) { ticking = false; return; }
+					if (!timeline) {
+						ticking = false;
+						return;
+					}
 
 					const rect = timeline.getBoundingClientRect();
 					const windowHeight = window.innerHeight;
@@ -185,7 +192,7 @@
 	<h1
 		class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight pb-2"
 	>
-		Bui Thanh Luan (Lucas)
+		<AuroraText>Bui Thanh Luan (Lucas)</AuroraText>
 	</h1>
 
 	<p
@@ -211,9 +218,8 @@
 	>
 		<span class="text-brand-cyan">💰</span>
 		<span
-			>Expected Salary: <strong
-				class="text-brand-purple dark:text-brand-cyan font-extrabold"
-				>$1000 - $1200 NET</strong
+			>Expected Salary: <AuroraText class="font-extrabold"
+				>$1000 - $1200 NET</AuroraText
 			></span
 		>
 	</div>
