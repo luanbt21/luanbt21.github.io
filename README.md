@@ -1,64 +1,74 @@
 # Luân Bùi (Lucas) - luanbt21
 
-## Full Stack Developer
+## Middle Backend Engineer & Team Lead
 
 ## Contacts
 
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luanbt21@gmail.com)](mailto:luanbt21@gmail.com) [![Phone Badge](https://img.shields.io/badge/-Phone-007ACC?style=flat-square&logo=Phone&logoColor=white&link=tel:0966006367)](tel:0966006367) [![Linkedin Badge](https://img.shields.io/badge/-Linkedin-0072b1?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lu%C3%A2n-b%C3%B9i-755406213/)](https://www.linkedin.com/in/lu%C3%A2n-b%C3%B9i-755406213/) [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/luanbt21)](https://github.com/luanbt21)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luanbt21@gmail.com)](mailto:luanbt21@gmail.com) [![Phone Badge](https://img.shields.io/badge/-Phone-007ACC?style=flat-square&logo=Phone&logoColor=white&link=tel:0966006367)](tel:0966006367) [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/luanbt21)](https://github.com/luanbt21)
 
-## About me
+📍 **Hanoi, Vietnam**
 
-Full stack developer of multiple projects. Have knowledge and experience in typescript, golang, java.
-Aim to be a Senior Backend developer in two years and beyond in the future. Able to API, deploy and build apps to the cloud. Have a preference for high performance, automation technology.
-Hardworking, keen on researching, passionate about programming.
-Thinking logically, have a high sense of responsibility, ready to face problems.
-I look forward to working with high performance products.
+## About Me
+
+Backend-focused Software Engineer with over 3 years of experience in high-performance system development, particularly using **TypeScript, Go, and Rust**. I thoroughly analyze business requirements to design and implement optimal, scalable APIs. Able to deploy cloud-native applications (AWS, Alibaba Cloud), and implement automation technologies. Highly logical, responsible, and passionate about programming, with a focus on researching and solving complex problems.
 
 ## Education
 
-**National Economics University (NEU) - Hanoi,Vietnam**  
-Sep 2019 - Mar 2023  
-Major: Information Technology  
-GPA: 3.3/4.0
-
-## Work Experience
-
-**CMC Global - Hanoi, Vietnam**  
-Backend Developer  
-Jun 2022 - Present  
-**Used technologies**: NestJS, Typescript, TypeORM, Data Dog, MongoDB, PostgreSQL, Docker, AWS
+**National Economics University (NEU) - Hanoi, Vietnam**  
+*Sep 2019 - Mar 2023*  
+**Major:** Information Technology  
+**GPA:** 3.3/4.0
 
 ## Skills
 
-- **Languages**: JavaScript/TypeScript, Rust, Go, HTML, CSS/Tailwind, Java
-- **Frameworks**: NestJS, ExpressJS, SvelteKit, VueJS, ReactJS, Spring Boot, Gin, Echo, Axum
-- **Databases**: MongoDB, PostgreSQL, MySQL, Redis, Firebase
-- **Cloud**: AWS, Vercel, Firebase
-- **IDE**: VSCode, IntelliJ, NeoVim
-- **Developer Tool**: Git, Docker, Postman, Data Dog, Jira, Confluence,Github, Bitbucket, Slack, Figma
-- **Message queue**: Kafka
-- **Others**: Ubuntu, CLI, CI/CD, OOP, RESTful API, SOLID, CQRS
+| Category | Description / Technologies |
+| :--- | :--- |
+| **Full-Stack (Typescript)** | Architected 100% Type-safe systems, eliminating major runtime exceptions. |
+| **Go (Golang) Development** | Engineered high-concurrency backend services utilizing Goroutines, Channels. |
+| **Database Design & Optimization** | Designed scalable schemas and optimized queries for PostgreSQL; Prisma ORM. |
+| **Orchestration & Containers** | Managed distributed systems with Kubernetes and Docker, multi-stage Dockerfiles. |
+| **CI/CD & DevOps Automation** | Established automated deployment pipelines (GitHub Actions/Jenkins). |
+| **System Design & Clean Architecture** | Implemented Clean Architecture and SOLID principles for modularity. |
+| **Technical Mentorship** | Conducted deep code reviews, established standards, and mentored peers. |
+
+## Work Experience
+
+### SWANTECH TECHNOLOGY., JSC
+**Middle Backend Engineer (Team Lead)**  
+*Mar 2025 – May 2026*  
+- **Distributed Systems Architecture:** Designed and spearheaded a Typescript-based monorepo using Turbo/pnpm, enabling rapid scaling of microservices and reducing cross-service integration time by 40%.
+- **Database Reliability:** Engineered complex PostgreSQL schemas with Prisma, implementing indexing strategies that maintained query performance.
+- **Technical Governance:** Established a standardized "Clean Architecture" framework across the team, resulting in a 30% reduction in technical debt and a 100% Type-safe development environment.
+- **Business analysis:** Collaborated with Product Owners to define project scope and translate complex business requirements into technical specifications.
+- **Leading:** Managed and allocated tasks for a 3-person team, ensuring project timelines and high-quality deliverables were met.
+- **Technologies:** Monorepo(Turbo, Pnpm, Bun, HonoJS, NextJS, Prisma), Go, Postgres, Redis, Kafka, Docker
+
+### SONG PHAN TECHNOLOGY., JSC
+**Full Stack Engineer (Go & TypeScript)**  
+*Nov 2023 – Feb 2025*  
+- **API Performance Tuning:** Leveraged Go (Gin) to build high-performance RESTful APIs, utilizing context management and middleware.
+- **Data Integrity & Modeling:** Developed highly-normalized relational models using Prisma, ensuring seamless data synchronization.
+- **Quality Standards:** Championed Test-Driven Development (TDD) and established a comprehensive testing suite (Unit/E2E), maintaining over 80% code coverage.
+- **Technologies:** NestJS, Prisma, Go, Gin, Postgres, Redis, Kafka, NextJS, Ant Design, Docker
+
+### CMC GLOBAL COMPANY LIMITED
+**Backend Developer**  
+*Jun 2022 – Oct 2023*  
+- **Legacy Modernization:** Migrated synchronous legacy processes to Go’s concurrency model, drastically increasing system throughput.
+- **Infrastructure Management:** Deployed containerized applications using Docker and Kubernetes, managing service health via DataDog.
+- **Scalable API Design:** Built and maintained RESTful APIs under Clean Architecture patterns on AWS.
+- **Technologies:** Go, Gin, NestJS, Typescript, TypeORM, Postman, Data Dog, Postgres, Kafka, AWS, Docker, K8s, Jenkins, Helm
+
+## Projects
+
+- **Academy School Management** *(Mar 2025 – May 2026)*: Platform for schools and academies managing lecturers, students, training progress, and equipment. Designed RBAC, graduation auditing engine, and digitized academic processes.
+- **Order Image Processing Service** *(Aug 2025 – Oct 2025)*: Rust-based image processing pipeline with minimal memory footprint managing the lifecycle of image-based orders with NATS message queue.
+- **Online Test** *(Nov 2024 – Feb 2025)*: Examination platform with randomized question bank generator, real-time progress tracking, auto grading, and analytics.
+- **Warehouse Management** *(Nov 2023 – Oct 2024)*: Logistics platform using asynchronous event-driven architecture to track goods movement and inventory across multiple locations.
+- **Online Payment (Boost Malaysia)** *(Jul 2022 – Oct 2023)*: Digital wallet for merchants to accept payments from e-wallets and local banks, integrated with Paynet and Gkash.
 
 ## Certifications
 
-**Aptis B2 - British Council**
-May 2023
-
-**Back End Development and APIs - freeCodeCamp**
-Sep 2021
-
-**JavaScript Algorithms and Data Structures - freeCodeCamp**
-Sep 2021
-
-## Responsibilities
-
-- Design structure and apply index for database.
-- Interact with clients to understand requirements.
-- Develop as a full stack developer.
-- Integration with third-party services.
-- Follow project Git flow.
-- Write unit test, integration test.
-- Write API document.
-- Deploy project to cloud.
-- Setup domain.
-- Sharing knowledge with team.
+- **Aptis B2** - British Council *(May 2023)*
+- **Back End Development and APIs** - FreeCodeCamp *(Sep 2021)*
+- **JavaScript Algorithms and Data Structures** - FreeCodeCamp *(Sep 2021)*
