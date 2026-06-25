@@ -5,22 +5,29 @@
 	let svgPath = $state<SVGPathElement | null>(null);
 
 	onMount(() => {
+		let ticking = false;
 		const handleScroll = () => {
-			if (!svgPath) return;
-			const timeline = document.getElementById("experience-timeline");
-			if (!timeline) return;
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					if (!svgPath) { ticking = false; return; }
+					const timeline = document.getElementById("experience-timeline");
+					if (!timeline) { ticking = false; return; }
 
-			const rect = timeline.getBoundingClientRect();
-			const windowHeight = window.innerHeight;
+					const rect = timeline.getBoundingClientRect();
+					const windowHeight = window.innerHeight;
 
-			// Draw the path as the timeline scrollport passes the middle of the screen
-			const scrollStart = rect.top - windowHeight / 2;
-			const totalScroll = rect.height;
-			const progress = Math.min(Math.max(-scrollStart / totalScroll, 0), 1);
+					// Draw the path as the timeline scrollport passes the middle of the screen
+					const scrollStart = rect.top - windowHeight / 2;
+					const totalScroll = rect.height;
+					const progress = Math.min(Math.max(-scrollStart / totalScroll, 0), 1);
 
-			const pathLength = svgPath.getTotalLength();
-			svgPath.style.strokeDasharray = `${pathLength}`;
-			svgPath.style.strokeDashoffset = `${pathLength * (1 - progress)}`;
+					const pathLength = svgPath.getTotalLength();
+					svgPath.style.strokeDasharray = `${pathLength}`;
+					svgPath.style.strokeDashoffset = `${pathLength * (1 - progress)}`;
+					ticking = false;
+				});
+				ticking = true;
+			}
 		};
 
 		window.addEventListener("scroll", handleScroll);
@@ -176,7 +183,7 @@
 	class="relative py-12 md:py-20 flex flex-col items-center text-center max-w-4xl mx-auto reveal-on-scroll"
 >
 	<h1
-		class="text-4xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-brand-cyan to-brand-purple dark:from-white leading-tight pb-2"
+		class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight pb-2"
 	>
 		Bui Thanh Luan (Lucas)
 	</h1>
@@ -205,7 +212,7 @@
 		<span class="text-brand-cyan">💰</span>
 		<span
 			>Expected Salary: <strong
-				class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-purple font-extrabold"
+				class="text-brand-purple dark:text-brand-cyan font-extrabold"
 				>$1000 - $1200 NET</strong
 			></span
 		>
@@ -301,7 +308,7 @@
 >
 	<div class="text-center mb-12">
 		<h2
-			class="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-slate-100 dark:to-slate-300"
+			class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
 		>
 			Featured Side Project
 		</h2>
@@ -366,7 +373,7 @@
 					href="https://family-tree.luanbt.com/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-brand-cyan to-brand-purple text-white font-semibold text-sm hover:shadow-lg hover:shadow-brand-cyan/20 hover:scale-105 transition-all select-none interactive-element"
+					class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-linear-to-r from-brand-cyan to-brand-purple text-white font-semibold text-sm hover:shadow-lg hover:shadow-brand-cyan/20 hover:scale-105 transition-all select-none interactive-element"
 				>
 					Visit family-tree.luanbt.com
 					<svg
@@ -394,6 +401,7 @@
 			<svg
 				class="absolute inset-0 w-full h-full opacity-30 dark:opacity-20"
 				fill="none"
+				viewBox="0 0 288 220"
 			>
 				<path
 					d="M 144 20 C 144 80, 72 80, 72 140 M 144 20 C 144 80, 216 80, 216 140 M 72 140 L 72 200 M 216 140 L 216 200"
@@ -438,7 +446,7 @@
 >
 	<div class="text-center mb-12 reveal-on-scroll">
 		<h2
-			class="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-slate-100 dark:to-slate-300"
+			class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
 		>
 			Work Experience
 		</h2>
@@ -669,7 +677,7 @@
 >
 	<div class="text-center mb-12 reveal-on-scroll">
 		<h2
-			class="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-slate-100 dark:to-slate-300"
+			class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
 		>
 			Other Projects
 		</h2>
@@ -723,7 +731,7 @@
 <section id="skills" class="py-12 border-t border-white/10 dark:border-white/5">
 	<div class="text-center mb-12 reveal-on-scroll">
 		<h2
-			class="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-slate-500 dark:from-slate-100 dark:to-slate-300"
+			class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white"
 		>
 			Skills Catalog
 		</h2>
